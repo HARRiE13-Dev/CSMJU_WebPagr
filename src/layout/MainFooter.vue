@@ -5,34 +5,26 @@
     :data-background-color="backgroundColor"
   >
     <div class="container">
-      <nav>
-        <ul>
-          <li>
-            <a href="https://www.creative-tim.com">
-              Creative Tim
-            </a>
-          </li>
-          <li>
-            <a href="https:///presentation.creative-tim.com">
-              About Us
-            </a>
-          </li>
-          <li>
-            <a href="https:///blog.creative-tim.com">
-              Blog
-            </a>
-          </li>
-          <li>
-            <a href="https://www.creative-tim.com/license">
-              Licenses
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <div class="copyright">
-        &copy; {{ year }}, made with <md-icon>favorite</md-icon> by
-        <a href="https://www.creative-tim.com/" target="_blank">Creative Tim</a>
-        for a better web.
+      <div class="row">
+    <div class="col">
+      <h5>Location :</h5>
+      สาขาวิชาวิทยาการคอมพิวเตอร์ คณะวิทยาศาสตร์ มหาวิทยาลัยแม่โจ้
+      63 หมู่ 4 ต.หนองหาร อ.สันทราย จ.เชียงใหม่ 50290
+      {{Map}}
+    </div>
+    <div class="col">
+      Contact : 
+    </div>
+    <div class="col">
+      Logo
+    </div>
+  </div>
+  <hr>
+  
+      <div class="copyright container text-center">
+        &copy; {{ year }} All Rights Reserved.
+        <p>Development & Design by HOP Teams | CSMJU 24</p>
+
       </div>
     </div>
   </footer>

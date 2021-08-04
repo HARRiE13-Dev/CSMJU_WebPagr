@@ -36,7 +36,7 @@
                     <drop-down direction="down">
                       <md-button
                         slot="title"
-                        class="md-button md-button-link md-white md-simple dropdown-toggle"
+                        class="md-button md-button-link md-white md-simple dropdown-toggles"
                         data-toggle="dropdown"
                       >
                         <i class="material-icons">apps</i>
@@ -70,7 +70,7 @@
             <md-list-item href="#/landing">
                   <p>News</p>
             </md-list-item>
-
+          
             <li class="md-list-item">
                 <a
                   href="javascript:void(0)"
@@ -80,7 +80,7 @@
                     <drop-down direction="down">
                       <md-button
                         slot="title"
-                        class="md-button md-button-link md-white md-simple dropdown-toggle"
+                        class="md-button md-button-link md-white md-simple dropdown-toggles"
                         data-toggle="dropdown"
                       >
                         <p>Program</p>
@@ -139,7 +139,7 @@
                     <drop-down direction="down">
                       <md-button
                         slot="title"
-                        class="md-button md-button-link md-white md-simple dropdown-toggle"
+                        class="md-button md-button-link md-white md-simple dropdown-toggles"
                         data-toggle="dropdown"
                       >
                         <i class="material-icons">view_carousel</i>
