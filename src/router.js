@@ -6,6 +6,7 @@ import Login from "./views/Login.vue";
 import Profile from "./views/Profile.vue";
 import MainNavbar from "./layout/MainNavbar.vue";
 import MainFooter from "./layout/MainFooter.vue";
+import Compo from "./views/Compo.vue";
 
 Vue.use(Router);
 
@@ -24,6 +25,15 @@ export default new Router({
       path: "/landing",
       name: "landing",
       components: { default: Landing, header: MainNavbar, footer: MainFooter },
+      props: {
+        header: { colorOnScroll: 400 },
+        footer: { backgroundColor: "black" }
+      }
+    },
+    {
+      path: "/compo",
+      name: "compo",
+      components: { default: Compo, header: MainNavbar, footer: MainFooter },
       props: {
         header: { colorOnScroll: 400 },
         footer: { backgroundColor: "black" }
