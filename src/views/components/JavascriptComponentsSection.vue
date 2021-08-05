@@ -143,6 +143,7 @@
         </div>
       </div>
       <br />
+
       <div class="title">
         <h3>Carousel</h3>
       </div>
@@ -191,6 +192,7 @@
           </md-card>
         </div>
       </div>
+      
     </div>
   </div>
 </template>

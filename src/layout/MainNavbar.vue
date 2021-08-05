@@ -8,7 +8,7 @@
   >
     <div class="md-toolbar-row md-collapse-lateral">
       <div class="md-toolbar-section-start">
-        <h3 class="md-title">CSMJU</h3>
+        <h3 class="md-title">Computer Science MJU</h3>
       </div>
       <div class="md-toolbar-section-end">
         <md-button
@@ -27,7 +27,13 @@
               <!-- Here you can add your items from the section-start of your toolbar -->
             </mobile-menu>
             <md-list>
-              <li class="md-list-item" v-if="!showDownload">
+              
+              <md-list-item href="#/">
+                  <p>หน้าหลัก</p>
+            </md-list-item>
+
+             
+            <li class="md-list-item">
                 <a
                   href="javascript:void(0)"
                   class="md-list-item-router md-list-item-container md-button-clean dropdown"
@@ -39,36 +45,40 @@
                         class="md-button md-button-link md-white md-simple dropdown-toggles"
                         data-toggle="dropdown"
                       >
-                        <i class="material-icons">apps</i>
-                        <p>Components</p>
+                        <p>เกี่ยวกับ</p>
                       </md-button>
                       <ul class="dropdown-menu dropdown-with-icons">
                         <li>
-                          <a href="#/">
-                            <i class="material-icons">layers</i>
-                            <p>All Components</p>
+                          <a href="#/landing">
+                            <i class="material-icons">view_day</i>
+                            <p>แนะนำสาขาวิชา</p>
                           </a>
                         </li>
                         <li>
-                          <a
-                            href="https://demos.creative-tim.com/vue-material-kit/documentation/"
-                          >
-                            <i class="material-icons">content_paste</i>
-                            <p>Documentation</p>
+                          <a href="#/landing">
+                            <i class="material-icons">account_circle</i>
+                            <p>คณาจารย์</p>
                           </a>
                         </li>
+                        <li>
+                          <a href="#/landing">
+                            <i class="material-icons">account_circle</i>
+                            <p>เจ้าหน้าที่</p>
+                          </a>
+                        </li>
+                       
                       </ul>
                     </drop-down>
                   </div>
                 </a>
               </li>
 
-              <md-list-item href="#/landing">
-                  <p>About Us</p>
+            <md-list-item href="#/landing">
+                  <p>ข่าวสาร</p>
             </md-list-item>
 
             <md-list-item href="#/landing">
-                  <p>News</p>
+                  <p>หลักสูตร</p>
             </md-list-item>
           
             <li class="md-list-item">
@@ -83,19 +93,52 @@
                         class="md-button md-button-link md-white md-simple dropdown-toggles"
                         data-toggle="dropdown"
                       >
-                        <p>Program</p>
+                        <p>เข้าสู่ระบบ</p>
                       </md-button>
                       <ul class="dropdown-menu dropdown-with-icons">
                         <li>
                           <a href="#/landing">
                             <i class="material-icons">view_day</i>
-                            <p>Landing Page</p>
+                            <p>สำหรับนักศึกษา</p>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#/profile">
+                            <i class="material-icons">account_circle</i>
+                            <p>สำหรับบุคคลากร</p>
+                          </a>
+                        </li>
+                      </ul>
+                    </drop-down>
+                  </div>
+                </a>
+              </li>
+
+              <li class="md-list-item">
+                <a
+                  href="javascript:void(0)"
+                  class="md-list-item-router md-list-item-container md-button-clean dropdown"
+                >
+                  <div class="md-list-item-content">
+                    <drop-down direction="down">
+                      <md-button
+                        slot="title"
+                        class="md-button md-button-link md-white md-simple dropdown-toggles"
+                        data-toggle="dropdown"
+                      >
+                        <p>ติดต่อ</p>
+                      </md-button>
+                      <ul class="dropdown-menu dropdown-with-icons">
+                        <li>
+                          <a href="#/landing">
+                            <i class="material-icons">view_day</i>
+                            <p>ช่องทางการติดต่อ</p>
                           </a>
                         </li>
                         <li>
                           <a href="#/login">
                             <i class="material-icons">fingerprint</i>
-                            <p>Login Page</p>
+                            <p>ร้องเรียนออนไลน์</p>
                           </a>
                         </li>
                         <li>
@@ -111,64 +154,6 @@
               </li>
 
             
-
-
-              <md-list-item
-                href="https://demos.creative-tim.com/vue-material-kit/documentation/"
-                target="_blank"
-                v-if="showDownload"
-              >
-                
-                <p>Documentation</p>
-              </md-list-item>
-
-              <md-list-item
-                href="javascript:void(0)"
-                @click="scrollToElement()"
-                v-if="showDownload"
-              >
-                <p>Download</p>
-              </md-list-item>
-
-              <li class="md-list-item" v-else>
-                <a
-                  href="javascript:void(0)"
-                  class="md-list-item-router md-list-item-container md-button-clean dropdown"
-                >
-                  <div class="md-list-item-content">
-                    <drop-down direction="down">
-                      <md-button
-                        slot="title"
-                        class="md-button md-button-link md-white md-simple dropdown-toggles"
-                        data-toggle="dropdown"
-                      >
-                        <i class="material-icons">view_carousel</i>
-                        <p>Examples</p>
-                      </md-button>
-                      <ul class="dropdown-menu dropdown-with-icons">
-                        <li>
-                          <a href="#/landing">
-                            <i class="material-icons">view_day</i>
-                            <p>Landing Page</p>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#/login">
-                            <i class="material-icons">fingerprint</i>
-                            <p>Login Page</p>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#/profile">
-                            <i class="material-icons">account_circle</i>
-                            <p>Profile Page</p>
-                          </a>
-                        </li>
-                      </ul>
-                    </drop-down>
-                  </div>
-                </a>
-              </li>
 
               <md-list-item
                 href="https://www.facebook.com/CreativeTim"

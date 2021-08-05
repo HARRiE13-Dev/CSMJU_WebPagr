@@ -19,20 +19,59 @@
 
       <div class="section">
         <div class="container">
-          <div class="title">
-            <h2>News</h2>
-            <h4>ข่าวสาร</h4>
-            
+           <div class="title">
+            <h2>News & Information</h2>
+            <h4>ข่าวสารประชาสัมพันธ์ข้อมูล</h4>
           </div>
-        </div>
-      </div>
 
-      <div class="section">
-        <div class="container">
-          <div class="title">
-            <h2>Course Outline</h2>
-            <h4>หลักสูตรการเรียน</h4>
+          <hr>
+
+          <div class="md-layout">
+            <div class="md-layout-item  mx-auto md-small-size-100">
+              <md-card>
+                <carousel
+                  :per-page="1"
+                  loop
+                  :speed="700"
+                  autoplay
+                  :autoplay-timeout="5000"
+                  :mouse-drag="false"
+                  navigationEnabled
+                  navigationNextLabel="<i class='material-icons'>keyboard_arrow_right</i>"
+                  navigationPrevLabel="<i class='material-icons'>keyboard_arrow_left</i>"
+                >
+                  <slide>
+                    <div class="carousel-caption">
+                      <h4>
+                        <md-icon>location_on</md-icon>
+                        Somewhere Beyond, United States
+                      </h4>
+                    </div>
+                    <img :src="carousel1" alt="carousel1" />
+                  </slide>
+                  <slide>
+                    <div class="carousel-caption">
+                      <h4>
+                        <md-icon>location_on</md-icon>
+                        Yellowstone National Park, United States
+                      </h4>
+                    </div>
+                    <img :src="carousel2" alt="carousel2" />
+                  </slide>
+                  <slide>
+                    <div class="carousel-caption">
+                      <h4>
+                        <md-icon>location_on</md-icon>
+                        Yellowstone National Park, United States
+                      </h4>
+                    </div>
+                    <img :src="carousel3" alt="carousel3" />
+                  </slide>
+                </carousel>
+              </md-card>
+            </div>
           </div>
+
           <div class="row row-cols-1 row-cols-md-2 g-4">
             <div class="col">
               <div class="card">
@@ -125,6 +164,45 @@
         </div>
       </div>
 
+      <div class="section">
+        <div class="container">
+          <div class="title">
+            <h2>Course Outline</h2>
+            <h4>หลักสูตรการเรียน</h4>
+          </div>
+          <md-datepicker v-model="selectedDate">
+                <label>Select date</label>
+              </md-datepicker>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="container">
+          <div class="title">
+            <h2>Workshop & Activity</h2>
+            <h4>ภาพกิจกรรมและอบรม</h4>
+          </div>
+        </div>
+      </div>
+
+         <div class="section">
+        <div class="container">
+          <div class="title">
+            <h2>Introduction</h2>
+            <h4>วิดีโอประชาสัมพันธ์หลักสูตร</h4>
+          </div>
+          <div class="">
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/88JeU0ShY60?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+
+        
+
+     
+
+         
+        </div>
+      </div>
+
     </div>
   </div>
 </template>
@@ -170,8 +248,9 @@ export default {
   },
   data() {
     return {
-      slide: 0,
-      sliding: null,
+      carousel1: require("@/assets/img/header.jpg"),
+      carousel2: require("@/assets/img/header.jpg"),
+      carousel3: require("@/assets/img/header.jpg"),
 
       firstname: null,
       email: null,
@@ -187,12 +266,6 @@ export default {
         this.leafShow = true;
       }
     },
-    onSlideStart(slide) {
-      this.sliding = true;
-    },
-    onSlideEnd(slide) {
-      this.sliding = false;
-    }
   },
   computed: {
     headerStyle() {
